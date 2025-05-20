@@ -13,9 +13,17 @@ dependencies:
     source:
       type: idf
     version: 5.4.1
+  zorxx/dht:
+    component_hash: 6a5e699b15509d99b90352694e23beb6646855486eb3bafefd1d50058d474e98
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1
 direct_dependencies:
 - espressif/esp_websocket_client
 - idf
-manifest_hash: 6c41c3ea7495cc7faa9d629e970cec02f65ccb895646e661de544c1f18ae305d
+- zorxx/dht
+manifest_hash: b208f9955f8604ca4ff77eb58d3ff4b565f525d4bab6216d6a89329c892f8f1c
 target: esp32
 version: 2.0.0

@@ -36,12 +36,12 @@ void read_all_sensors(SensorReading *buffer, size_t *count) {
     adc_oneshot_read(adc_handle, ADC_CHANNEL_5, &ldr_raw);  // ADC_CHANNEL_5 para LDR (ajuste o canal conforme o pino)
     buffer[index++] = (SensorReading){ .name = "light", .value = ldr_raw, .timestamp = timestamp };
 
-    /* // Leitura do sensor DHT (temperatura e umidade)
+    // Leitura do sensor DHT (temperatura e umidade)
     float temp, hum;
     if (read_dht_data(&temp, &hum)) {
         buffer[index++] = (SensorReading){ .name = "temperature", .value = (int)(temp * 10), .timestamp = timestamp };
         buffer[index++] = (SensorReading){ .name = "humidity", .value = (int)(hum * 10), .timestamp = timestamp };
-    } */
+    }
 
     *count = index;
 }
