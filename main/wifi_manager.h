@@ -1,6 +1,3 @@
-#ifndef WIFI_MANAGER_H
-#define WIFI_MANAGER_H
+#pragma once
 
 void wifi_init_sta(void);
-
-#endif
